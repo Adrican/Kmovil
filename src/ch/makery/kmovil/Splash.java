@@ -9,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Font;
@@ -23,7 +24,8 @@ public class Splash extends Application{
 	    public void start(Stage primaryStage) {
 	        this.primaryStage = primaryStage;
 	        this.primaryStage.setTitle("Kmovil");
-
+	        this.primaryStage.getIcons().add(
+					new Image("file:resources/images/faviconfinal.png"));
 	        initRootLayout();
 	    }
 

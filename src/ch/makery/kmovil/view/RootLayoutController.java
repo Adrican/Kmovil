@@ -7,6 +7,7 @@ import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.FileChooser;
@@ -47,10 +48,13 @@ public class RootLayoutController {
 			BorderPane page = (BorderPane) loader.load();
 			sendStage = new Stage();
 			sendStage.setTitle("Kmovil");
+			this.sendStage.getIcons().add(
+					new Image("file:resources/images/faviconfinal.png"));
 			Scene scene = new Scene(page);
 			sendStage.setScene(scene);
 
 			sendStage.show();
+			
 	        PauseTransition delay = new PauseTransition(Duration.seconds(5));
 			delay.setOnFinished( event -> sendStage.close() );
 			delay.play();
