@@ -1,7 +1,9 @@
 package ch.makery.kmovil.view;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
 
@@ -144,9 +146,12 @@ public class MobileEditDialogController {
 		if (errorMessage.length() == 0) {
 			return true;
 		} else {
-			// Show the error message.
-//			Dialogs.create().title("Invalid Fields").masthead("Please correct invalid fields").message(errorMessage)
-//					.showError();
+			Alert alert = new Alert(AlertType.INFORMATION);
+			alert.setTitle("Invalid fields");
+			alert.setHeaderText("Please correct invalid fields");
+			alert.setContentText(errorMessage);
+
+			alert.showAndWait();
 			return false;
 		}
 	}

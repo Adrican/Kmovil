@@ -7,6 +7,8 @@ import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -21,7 +23,7 @@ import ch.makery.kmovil.Splash;
  * application layout containing a menu bar and space where other JavaFX
  * elements can be placed.
  * 
- * @author Marco Jakob
+ * @author Marco Jakob, Adrian Canas and Marco Perez
  */
 public class RootLayoutController {
 
@@ -38,7 +40,11 @@ public class RootLayoutController {
         this.mainApp = mainApp;
     }
 
-    
+    /**
+     * Este metodo mostrará la splashscreen
+     * 
+     * @Author Ernesto Ramiro Cordoba, Modified by Adrian Canas Ramos
+     */
 	public void showSendProfile() {
     try {
     	
@@ -54,7 +60,7 @@ public class RootLayoutController {
 			sendStage.setScene(scene);
 
 			sendStage.show();
-			
+			mostrarSegs();
 	        PauseTransition delay = new PauseTransition(Duration.seconds(5));
 			delay.setOnFinished( event -> sendStage.close() );
 			delay.play();
@@ -142,11 +148,12 @@ public class RootLayoutController {
      */
     @FXML
     private void handleAbout() {
-//		Dialogs.create()
-//	        .title("AddressApp")
-//	        .masthead("About")
-//	        .message("Author: Marco Jakob\nWebsite: http://code.makery.ch")
-//	        .showInformation();
+    	Alert alert = new Alert(AlertType.INFORMATION);
+		alert.setTitle("Kmovil");
+		alert.setHeaderText("About");
+		alert.setContentText("Designed and modified by Adrian Canas Ramos and Marco Perez Aranda \nBased on Marco Jakob Project \nWebsite: http://code.makery.ch ");
+
+		alert.showAndWait();
     }
 
     /**
@@ -156,4 +163,15 @@ public class RootLayoutController {
     private void handleExit() {
         System.exit(0);
     }
+    
+	/**
+	 * Muestra el sendStage 5 segundos y lo cierra para hacer el efecto de splashscreen
+	 * 
+	 * @author Adrian Canas Ramos
+	 */
+	public void mostrarSegs(){
+		PauseTransition delay = new PauseTransition(Duration.seconds(5));
+		delay.setOnFinished( event -> sendStage.close() );
+		delay.play();
+	}
 }

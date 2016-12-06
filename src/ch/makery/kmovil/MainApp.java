@@ -10,6 +10,8 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -86,9 +88,7 @@ public class MainApp extends Application {
 			controller.setMainApp(this);
 
 			primaryStage.hide();
-			PauseTransition delay = new PauseTransition(Duration.seconds(5));
-			delay.setOnFinished( event -> primaryStage.show() );
-			delay.play();
+			esconderSegs();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -141,7 +141,7 @@ public class MainApp extends Application {
 
 			// Create the dialog Stage.
 			Stage dialogStage = new Stage();
-			dialogStage.setTitle("Edit Person");
+			dialogStage.setTitle("Edit Mobile");
 			dialogStage.initModality(Modality.WINDOW_MODAL);
 			dialogStage.initOwner(primaryStage);
 			dialogStage.getIcons().add(
@@ -194,12 +194,12 @@ public class MainApp extends Application {
 			prefs.put("filePath", file.getPath());
 
 			// Update the stage title.
-			primaryStage.setTitle("AddressApp - " + file.getName());
+			primaryStage.setTitle("Kmovil - " + file.getName());
 		} else {
 			prefs.remove("filePath");
 
 			// Update the stage title.
-			primaryStage.setTitle("AddressApp");
+			primaryStage.setTitle("Kmovil");
 		}
 	}
 
@@ -225,10 +225,12 @@ public class MainApp extends Application {
 			setMobileFilePath(file);
 
 		} catch (Exception e) { // catches ANY exception
-//			Dialogs.create()
-//					.title("Error")
-//					.masthead("Could not load data from file:\n" + file.getPath())
-//					.showException(e);
+//			Alert alert = new Alert(AlertType.INFORMATION);
+//			alert.setTitle("Error");
+//			alert.setHeaderText("Could not load data to file:\n" + file.getPath());
+//			alert.setContentText(e.getMessage());
+//
+//			alert.showAndWait();
 		}
 	}
 
@@ -253,10 +255,14 @@ public class MainApp extends Application {
 			
 			// Save the file path to the registry.
 			setMobileFilePath(file);
+			
 		} catch (Exception e) { // catches ANY exception
-//			Dialogs.create().title("Error")
-//					.masthead("Could not save data to file:\n" + file.getPath())
-//					.showException(e);
+			Alert alert = new Alert(AlertType.INFORMATION);
+			alert.setTitle("Error");
+			alert.setHeaderText("Could not save data to file:\n" + file.getPath());
+			alert.setContentText(e.getMessage());
+
+			alert.showAndWait();
 		}
 	}
 
@@ -276,6 +282,17 @@ public class MainApp extends Application {
 	 */
 	public ObservableList<Mobile> getMobileData() {
 		return mobileData;
+	}
+	
+	/**
+	 * Esconde el primarystage 5 segundos para hacer el efecto de splashscreen
+	 * 
+	 * @author Adrian Canas Ramos
+	 */
+	public void esconderSegs(){
+		PauseTransition delay = new PauseTransition(Duration.seconds(5));
+		delay.setOnFinished( event -> primaryStage.show() );
+		delay.play();
 	}
 
 	public static void main(String[] args) {
