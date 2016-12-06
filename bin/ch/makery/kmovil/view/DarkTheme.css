@@ -43,7 +43,7 @@
     -fx-border-color: 
         transparent
         transparent
-        derive(#008080, 80%) 
+        derive(#00ff99, 80%) 
         transparent;
     -fx-border-insets: 0 10 1 0;
 }
@@ -57,11 +57,11 @@
 }
 
 .table-view:focused .table-row-cell:filled:focused:selected {
-    -fx-background-color: -fx-focus-color;
+    -fx-background-color: #28be82;
 }
 
 .split-pane:horizontal > .split-pane-divider {
-    -fx-border-color:  #008080 #008080;
+    -fx-border-color:  #00ff99 #00ff99;
     -fx-background-color:  derive(#1d1d1d,20%);
 }
 
@@ -100,7 +100,7 @@
  */
 .button {
     -fx-padding: 5 22 5 22;   
-    -fx-border-color: #008080;
+    -fx-border-color: #00ff99;
     -fx-border-width: 2;
     -fx-background-radius: 0;
     -fx-background-color: #17202A;
@@ -121,7 +121,7 @@
 }
 
 .button:focused {
-    -fx-border-color: #008080, #008080;
+    -fx-border-color: #00ff99, #00ff99;
     -fx-border-width: 1, 1;
     -fx-border-style: solid, segments(1, 1);
     -fx-border-radius: 0, 0;
