@@ -44,7 +44,7 @@
 </children>
 </GridPane>
 <HBox layoutX="215.0" layoutY="259.0" spacing="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
-<children><Button layoutX="112.1875" layoutY="259.0" mnemonicParsing="false" onAction="#handleNewMobile" prefWidth="90.0" text="New..." /><Button layoutX="167.0" layoutY="259.0" mnemonicParsing="false" onAction="#handleEditMobile" prefWidth="90.0" text="Edit..." /><Button fx:id="buttonDelete" layoutX="221.0" layoutY="259.0" mnemonicParsing="false" onAction="#handleDeleteMobile" prefWidth="90.0" text="Delete" />
+<children><Button layoutX="112.1875" layoutY="259.0" mnemonicParsing="false" onAction="#handleNewMobile" prefWidth="90.0" text="New..." /><Button layoutX="167.0" layoutY="259.0" mnemonicParsing="false" onAction="#handleEditMobile" prefWidth="90.0" text="Edit..." /><Button layoutX="221.0" layoutY="259.0" mnemonicParsing="false" onAction="#handleDeleteMobile" prefWidth="90.0" text="Delete" />
 </children>
 </HBox>
 </children></AnchorPane>
