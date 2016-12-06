@@ -145,7 +145,7 @@ public class MainApp extends Application {
 			dialogStage.initModality(Modality.WINDOW_MODAL);
 			dialogStage.initOwner(primaryStage);
 			dialogStage.getIcons().add(
-					new Image("file:resources/images/edit.png"));
+					new Image("file:resources/images/faviconfinal.png"));
 			Scene scene = new Scene(page);
 			dialogStage.setScene(scene);
 
