@@ -19,13 +19,13 @@
 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
-<children><Label text="Modelo" /><TextField fx:id="modeloField" GridPane.columnIndex="1" /><Label text="Precio" GridPane.rowIndex="1" /><Label text="Procesador" GridPane.rowIndex="2" /><Label text="RAM" GridPane.rowIndex="3" /><Label text="ROM" GridPane.rowIndex="4" /><Label text="Pantalla" GridPane.rowIndex="5" /><TextField fx:id="precioField" GridPane.columnIndex="1" GridPane.rowIndex="1" /><TextField fx:id="procesadorField" GridPane.columnIndex="1" GridPane.rowIndex="2" /><TextField fx:id="ramField" GridPane.columnIndex="1" GridPane.rowIndex="3" /><TextField fx:id="romField" GridPane.columnIndex="1" GridPane.rowIndex="4" /><TextField fx:id="pantallaField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <Label text="Bateria" GridPane.rowIndex="6" />
+<children><Label text="Model" /><TextField fx:id="modeloField" GridPane.columnIndex="1" /><Label text="Price" GridPane.rowIndex="1" /><Label text="Processor" GridPane.rowIndex="2" /><Label text="RAM" GridPane.rowIndex="3" /><Label text="ROM" GridPane.rowIndex="4" /><Label text="Screen" GridPane.rowIndex="5" /><TextField fx:id="precioField" GridPane.columnIndex="1" GridPane.rowIndex="1" /><TextField fx:id="procesadorField" GridPane.columnIndex="1" GridPane.rowIndex="2" /><TextField fx:id="ramField" GridPane.columnIndex="1" GridPane.rowIndex="3" /><TextField fx:id="romField" GridPane.columnIndex="1" GridPane.rowIndex="4" /><TextField fx:id="pantallaField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="Battery" GridPane.rowIndex="6" />
             <TextField fx:id="bateriaField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
 </children>
 </GridPane>
 <HBox layoutX="197.1875" layoutY="241.0" spacing="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
-<children><Button defaultButton="true" layoutX="197.1875" layoutY="241.0" mnemonicParsing="false" onAction="#handleOk" prefWidth="110.0" text="OK" /><Button layoutX="249.375" layoutY="241.0" mnemonicParsing="false" onAction="#handleCancel" prefWidth="110.0" text="Cancel" />
+<children><Button defaultButton="true" layoutX="197.1875" layoutY="241.0" mnemonicParsing="false" onAction="#handleOk" prefWidth="110.0" style="-fx-background-color: #17202A;" text="OK" /><Button layoutX="249.375" layoutY="241.0" mnemonicParsing="false" onAction="#handleCancel" prefWidth="110.0" text="Cancel" />
 </children>
 </HBox>
 </children></AnchorPane>

@@ -43,10 +43,11 @@ public class Splash extends Application{
 	            
 
 	            // Show the scene containing the root layout.
-	            Scene scene = new Scene(rootLayout,537,530);				
+	            Scene scene = new Scene(rootLayout,525,525);				
 
 //				
 				primaryStage.setScene(scene);
+				primaryStage.setResizable(false);
 	            primaryStage.show();
 	            PauseTransition delay = new PauseTransition(Duration.seconds(5));
 				delay.setOnFinished( event -> primaryStage.close() );

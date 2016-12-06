@@ -285,7 +285,7 @@ public class MainApp extends Application {
 	}
 	
 	/**
-	 * Esconde el primarystage 5 segundos para hacer el efecto de splashscreen
+	 * Esconde el primarystage 6 segundos para hacer el efecto de splashscreen
 	 * 
 	 * @author Adrian Canas Ramos
 	 */
